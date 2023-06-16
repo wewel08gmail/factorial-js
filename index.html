@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Calculator</title>
+  <script>
+    function factorial(n) {
+      if (n === 0) {
+        return 1;
+      }
+      return n * factorial(n - 1);
+    }
+    
+    function calculateFactorial() {
+      const number = document.getElementById('number').value;
+      const result = factorial(number);
+      document.getElementById('output').textContent = `The factorial of ${number} is ${result}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Factorial Calculator</h1>
+  <label for="number">Enter a number:</label>
+  <input type="number" id="number" min="0">
+  <button onclick="calculateFactorial()">Calculate</button>
+  <p id="output"></p>
+</body>
+</html>
